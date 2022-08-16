@@ -6,7 +6,6 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
-import ThemeSettings from './components/ThemeSettings';
 
 import Ecommerce from './pages/Ecommerce';
 import ColorPicker from './pages/ColorPicker';
@@ -25,11 +24,10 @@ import Pie from './pages/Charts/Pie';
 import Financial from './pages/Charts/Financial';
 import ColorMapping from './pages/Charts/ColorMapping';
 import Line from './pages/Charts/Line';
-
 import './App.css';
 
 const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
 
   return (
     <div>
@@ -39,15 +37,16 @@ const App = () => {
             <TooltipComponent content='Settings' position='Top'>
               <button
                 type='button'
-                className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'
+                onClick={() => {}}
                 style={{ background: 'blue', borderRadius: '50%' }}
+                className='text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray'
               >
                 <FiSettings />
               </button>
             </TooltipComponent>
           </div>
           {activeMenu ? (
-            <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
+            <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white '>
               <Sidebar />
             </div>
           ) : (
@@ -55,17 +54,16 @@ const App = () => {
               <Sidebar />
             </div>
           )}
-          {/* Navigation Block */}
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full ${
-              activeMenu ? 'md:ml-72' : 'flex-2'
-            }`}
+            className={
+              activeMenu
+                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  '
+                : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
+            }
           >
-            <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
+            <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full '>
               <Navbar />
             </div>
-
-            {/* Routing */}
             <div>
               <Routes>
                 {/* Dashboard */}
