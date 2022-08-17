@@ -1,12 +1,13 @@
+// React Imports
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
+// Custom Imports => Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
-
+// Custom Imports => Pages
 import Ecommerce from './pages/Ecommerce';
 import ColorPicker from './pages/ColorPicker';
 import Orders from './pages/Orders';
@@ -15,7 +16,7 @@ import Employees from './pages/Employees';
 import Customers from './pages/Customers';
 import Kanban from './pages/Kanban';
 import Editor from './pages/Editor';
-
+// Custom Imports => Pages => Charts
 import Stacked from './pages/Charts/Stacked';
 import Pyramid from './pages/Charts/Pyramid';
 import Area from './pages/Charts/Area';
@@ -24,10 +25,13 @@ import Pie from './pages/Charts/Pie';
 import Financial from './pages/Charts/Financial';
 import ColorMapping from './pages/Charts/ColorMapping';
 import Line from './pages/Charts/Line';
+// Context Provider
+import { useStateContext } from './contexts/ContextProvider';
+// Import CSS
 import './App.css';
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
