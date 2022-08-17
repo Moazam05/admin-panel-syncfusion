@@ -17,7 +17,7 @@ import {
 // Custom Imports
 import Header from '../components/Header';
 // Dummy Data
-import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
+import { ordersData, ordersGrid } from '../data/dummy';
 
 const Orders = () => {
   return (
