@@ -1,3 +1,4 @@
+// React Imports
 import React from 'react';
 
 const Button = ({ bgColor, color, text, borderRadius, size }) => {

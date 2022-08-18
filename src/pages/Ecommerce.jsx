@@ -1,18 +1,12 @@
 // React Imports
 import React from 'react';
-import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 // Custom Imports
 import Stacked from '../components/Charts/Stacked';
-import Pie from '../components/Charts/Pie';
 import SparkLine from '../components/Charts/SparkLine';
 import Button from '../components/Button';
 // Dummy Data
-import {
-  earningData,
-  SparklineAreaData,
-  ecomPieChartData,
-} from '../data/dummy';
+import { earningData, SparklineAreaData } from '../data/dummy';
 // Context Provider
 import { useStateContext } from '../contexts/ContextProvider';
 

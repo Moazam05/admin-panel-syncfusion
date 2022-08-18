@@ -1,8 +1,6 @@
 // React Imports
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
-// Avatar
-import avatar from '../data/avatar.png';
 // Dummy Imports
 import { chatData } from '../data/dummy';
 // Context Provider
