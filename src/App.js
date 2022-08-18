@@ -1,29 +1,29 @@
 // React Imports
-import React from 'react';
+import React, { lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+// Context Provider
+import { useStateContext } from './contexts/ContextProvider';
+// Import CSS
+import './App.css';
 // Custom Imports => Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import ThemeSettings from './components/ThemeSettings';
 // Custom Imports => Pages
-import Ecommerce from './pages/Ecommerce';
-import ColorPicker from './pages/ColorPicker';
-import Orders from './pages/Orders';
-import Calender from './pages/Calender';
-import Employees from './pages/Employees';
-import Customers from './pages/Customers';
-import Kanban from './pages/Kanban';
-import Editor from './pages/Editor';
+const Ecommerce = lazy(() => import('./pages/Ecommerce'));
+const ColorPicker = lazy(() => import('./pages/ColorPicker'));
+const Orders = lazy(() => import('./pages/Orders'));
+const Calender = lazy(() => import('./pages/Calender'));
+const Employees = lazy(() => import('./pages/Employees'));
+const Customers = lazy(() => import('./pages/Customers'));
+const Kanban = lazy(() => import('./pages/Kanban'));
+const Editor = lazy(() => import('./pages/Editor'));
 // Custom Imports => Pages => Charts
-import Area from './pages/Charts/Area';
-import Line from './pages/Charts/Line';
-// Context Provider
-import { useStateContext } from './contexts/ContextProvider';
-// Import CSS
-import './App.css';
+const Area = lazy(() => import('./pages/Charts/Area'));
+const Line = lazy(() => import('./pages/Charts/Line'));
 
 const App = () => {
   const {
