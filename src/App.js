@@ -7,6 +7,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
+import ThemeSettings from './components/ThemeSettings';
 // Custom Imports => Pages
 import Ecommerce from './pages/Ecommerce';
 import ColorPicker from './pages/ColorPicker';
@@ -31,18 +32,24 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+  } = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
             <TooltipComponent content='Settings' position='Top'>
               <button
                 type='button'
-                onClick={() => {}}
-                style={{ background: 'blue', borderRadius: '50%' }}
+                onClick={() => setThemeSettings(true)}
+                style={{ background: currentColor, borderRadius: '50%' }}
                 className='text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray'
               >
                 <FiSettings />
@@ -69,6 +76,7 @@ const App = () => {
               <Navbar />
             </div>
             <div>
+              {themeSettings && <ThemeSettings />}
               <Routes>
                 {/* Dashboard */}
                 <Route path='/' element={<Ecommerce />} />
