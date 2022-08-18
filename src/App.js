@@ -1,5 +1,5 @@
 // React Imports
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
@@ -18,13 +18,7 @@ import Customers from './pages/Customers';
 import Kanban from './pages/Kanban';
 import Editor from './pages/Editor';
 // Custom Imports => Pages => Charts
-import Stacked from './pages/Charts/Stacked';
-import Pyramid from './pages/Charts/Pyramid';
 import Area from './pages/Charts/Area';
-import Bar from './pages/Charts/Bar';
-import Pie from './pages/Charts/Pie';
-import Financial from './pages/Charts/Financial';
-import ColorMapping from './pages/Charts/ColorMapping';
 import Line from './pages/Charts/Line';
 // Context Provider
 import { useStateContext } from './contexts/ContextProvider';
@@ -96,12 +90,6 @@ const App = () => {
                 {/* Charts */}
                 <Route path='/line' element={<Line />} />
                 <Route path='/area' element={<Area />} />
-                <Route path='/bar' element={<Bar />} />
-                <Route path='/pie' element={<Pie />} />
-                <Route path='/financial' element={<Financial />} />
-                <Route path='/color-mapping' element={<ColorMapping />} />
-                <Route path='/pyramid' element={<Pyramid />} />
-                <Route path='/stacked' element={<Stacked />} />
               </Routes>
             </div>
           </div>
