@@ -18,7 +18,8 @@ const Chat = () => {
           <p className='font-semibold text-lg dark:text-gray-200'>Chats</p>
           <button
             type='button'
-            className='text-white text-xs rounded p-1 px-2 bg-orange-500'
+            className='text-white text-xs rounded p-1 px-2'
+            style={{ background: '#03c9d7' }}
           >
             {' '}
             4 New

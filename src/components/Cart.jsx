@@ -1,8 +1,7 @@
 // React Imports
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
-// Custom Imports
-import Button from './Button';
+
 // Context Provider
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -30,7 +29,7 @@ const Cart = () => {
         <button
           type='button'
           className='text-white text-sm rounded p-1 px-2'
-          style={{ background: 'rgb(254, 201, 15)' }}
+          style={{ background: currentColor }}
         >
           {' '}
           No items in the cart
