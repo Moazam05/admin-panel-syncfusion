@@ -33,8 +33,12 @@ export const ContextProvider = ({ children }) => {
     setThemeSettings(false);
   };
 
-  const handleClick = (clicked) => {
-    setIsClicked({ ...initialState, [clicked]: true });
+  const handleClick = (clicked, bol) => {
+    if (clicked && bol) {
+      setIsClicked({ ...initialState, [clicked]: false });
+    } else {
+      setIsClicked({ ...initialState, [clicked]: true });
+    }
   };
 
   return (
