@@ -92,6 +92,7 @@ const App = () => {
                 <Route path='/area' element={<Area />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
